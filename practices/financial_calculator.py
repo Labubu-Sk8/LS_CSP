@@ -12,3 +12,4 @@ print("Your monthly income is $", monthly_income, "which is", ((rent/monthly_inc
 
 
 
+
