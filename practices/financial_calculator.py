@@ -24,6 +24,7 @@ savings = monthly_income * 0.10
 spending_money = monthly_income - rent + utilities + groceries + transportation
               
 print("Your monthly income is $", monthly_income, "which is", rent_precent, "% of your income" + round(1+rent_precent),2)
+print("Your ")
 
 
 
