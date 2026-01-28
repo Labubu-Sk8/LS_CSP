@@ -2,6 +2,7 @@
 """color = input("What is your favorite color?: ").strip().capitalize()
 
 print(color, "is a really cool color!")"""
+"""concatenation is used with the + symbol"""
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
@@ -14,5 +15,7 @@ start = sentence.find("fox")
 print(sentence)
 sentence = sentence.replace(word, new)
 print(sentence)
+
+
 
 
