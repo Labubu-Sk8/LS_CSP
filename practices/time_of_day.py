@@ -2,7 +2,7 @@
 
 time = int(input("What time is it right now in military time?: "))
 
-if time > 12 and time < 15:
+if time >= 12 and time <= 15:
     print("Good Afternoon")
 elif time < 12:
     print("Good Morning")
