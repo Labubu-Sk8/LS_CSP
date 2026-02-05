@@ -18,7 +18,7 @@ spending_money = monthly_income - (rent + utilities + groceries + transportation
 mortgage_precent = (rent / monthly_income) * 100 
 utilities_precent = (utilities / monthly_income) * 100 
 groceries_precent = (groceries / monthly_income) * 100 
-transportation_precent = (transportation / monthly_income) * 100 
+transportation_precent = (transportation / monthly_income) * 100
 
 print(f"Your monthly income is $", monthly_income)
 print(f"Your mortage is $", rent, "which is", round(mortgage_precent, 2), "% of your income")
