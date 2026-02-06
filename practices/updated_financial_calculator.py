@@ -6,6 +6,9 @@ def question(cost):
 
 income = question("income")
 mortage = question("mortgage")
+utilites = question("utilites")
+groceries = question("groceries")
+transportation = question("transportation")
 
     
 
