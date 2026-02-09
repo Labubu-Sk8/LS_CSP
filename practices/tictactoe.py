@@ -16,7 +16,7 @@ def print_board(board):
     print(f" {board[6]} | {board[7]} | {board[8]} ")
 
 def player_turns(board, player_turns, spaces_available):
-    combination = {"row 1": [0,1,2], "row 2": [3,4,5], "row 3": "col 1"[1,4,7], "col 2": [2,5,8], "col 3": [3,6,9], "diag 1": [1,5,9], "diag 2": [3,5,7]}
+    combinations = {"row 1": [0,1,2], "row 2": [3,4,5], "row 3": [6,7,8], "col 1": [0,3,6], "col 2": [1,4,7], "col 3": [2,5,8], "diag 1": [0,4,8], "diag 2": [2,4,6]}
     while True:
         if player_turns % 2 == 0:
             symbol = "X"
@@ -26,11 +26,41 @@ def player_turns(board, player_turns, spaces_available):
             location = random.randint(1,9)
         print(f"Computer chose spot {location}")
         if location in spaces_available:
-         break
-
-
-
-
-     
-
-    
+         break 
+        else:
+            print("Try again that spot is taken")
+        if location == 1:
+            board[0] = symbol
+        if location == 2:
+            board[1] = symbol
+        if location == 3:
+            board[2] = symbol 
+        if location == 4:
+            board[3] = symbol
+        if location == 5:
+            board[4] = symbol
+        if location == 6:
+            board[5] = symbol
+        if location == 7:
+            board[6] = symbol
+        if location == 9:
+            board[8] = symbol
+        spaces_available.remove(location)
+        return  symbol
+    board = [" "] * 9 
+    spaces_available = [1,2,3,4,5,6,7,8,9]
+    player_turns == 0 
+    print("Welcome to tic-tac-toe")
+    print("You're X and the computer is O, beat your opponent and enjoy!")
+    print_board(board)
+    while True:
+        current_player = player_turns(board, player_turns, spaces_available)
+        player_turns += 1
+        print_board(board)
+        winner = won(board)
+        if winner:
+            if winner == "X":
+                print("You Won!")
+                again = input("Would you like to play again?(yes/no)\n)").strip().lower()
+                if again == "yes":
+                    
