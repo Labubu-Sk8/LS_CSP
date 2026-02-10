@@ -3,7 +3,7 @@
 import random
 
 def won(board):
-    combinations = [[0,1,2]], [[3,4,5]], [[6,7,8]], [[0,3,6]], [[1,4,7]],[[2,5,8]],[[0,4,8]],[[2,4,6]]
+    combinations = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     for combo in combinations:
         if board[combo[0]] == board[combo[1]] == board[combo[2]] and board[combo[0]] != " ":
             return board[combo[0]]
@@ -15,15 +15,17 @@ def print_board(board):
     print("---+---+---")
     print(f" {board[6]} | {board[7]} | {board[8]} ")
 
-def player_turns(board, player_turns, spaces_available):
+def player_turns(board, turns, spaces_available):
     combinations = {"row 1": [0,1,2], "row 2": [3,4,5], "row 3": [6,7,8], "col 1": [0,3,6], "col 2": [1,4,7], "col 3": [2,5,8], "diag 1": [0,4,8], "diag 2": [2,4,6]}
     while True:
-        if player_turns % 2 == 0:
+        if turns % 2 == 0:
             symbol = "X"
+            
             location = int(input("Where do you want to place?\n"))
-        else:
-            symbol = "O"
-            location = random.randint(1,9)
+        else: 
+            symbol = "O" 
+            
+        location = random.randint(1,9)
         print(f"Computer chose spot {location}")
         if location in spaces_available:
          break 
@@ -34,7 +36,7 @@ def player_turns(board, player_turns, spaces_available):
         if location == 2:
             board[1] = symbol
         if location == 3:
-            board[2] = symbol 
+            board[2] = symbol
         if location == 4:
             board[3] = symbol
         if location == 5:
@@ -47,20 +49,23 @@ def player_turns(board, player_turns, spaces_available):
             board[8] = symbol
         spaces_available.remove(location)
         return  symbol
-    board = [" "] * 9 
-    spaces_available = [1,2,3,4,5,6,7,8,9]
-    player_turns == 0 
-    print("Welcome to tic-tac-toe")
-    print("You're X and the computer is O, beat your opponent and enjoy!")
+board = [" "] * 9 
+spaces_available = [1,2,3,4,5,6,7,8,9]
+turns = 0 
+print("Welcome to tic-tac-toe")
+print("You're X and the computer is O, beat your opponent and enjoy!")
+print_board(board)
+while True:
+    current_player = player_turns(board, turns, spaces_available)
+    player_turns == 1
     print_board(board)
-    while True:
-        current_player = player_turns(board, player_turns, spaces_available)
-        player_turns += 1
-        print_board(board)
-        winner = won(board)
-        if winner:
-            if winner == "X":
-                print("You Won!")
-                again = input("Would you like to play again?(yes/no)\n)").strip().lower()
-                if again == "yes":
-                    
+    winner = won(board)
+    if winner:
+        if winner == "X":
+            print("You Won!")
+            again = input("Would you like to play again?(yes/no)\n)").strip().lower()
+            if again == "yes":
+                won(board)
+            else:
+                print("Thanks for playing tic-tac-toe!")
+                
