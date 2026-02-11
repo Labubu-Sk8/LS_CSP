@@ -18,18 +18,17 @@ def print_board(board):
 def player_turns(board, turns, spaces_available):
     combinations = {"row 1": [0,1,2], "row 2": [3,4,5], "row 3": [6,7,8], "col 1": [0,3,6], "col 2": [1,4,7], "col 3": [2,5,8], "diag 1": [0,4,8], "diag 2": [2,4,6]}
     while True:
+        turns += 1
         if turns % 2 == 0:
             symbol = "X"
-            
             location = int(input("Where do you want to place?\n"))
         else: 
             symbol = "O" 
-            
-        location = random.randint(1,9)
-        print(f"Computer chose spot {location}")
-        if location in spaces_available:
-         break 
-        else:
+            location = random.randint(1,9)
+            print(f"Computer chose spot {location}")
+        if location not in spaces_available:
+            return
+        else: 
             print("Try again that spot is taken")
         if location == 1:
             board[0] = symbol
@@ -48,7 +47,7 @@ def player_turns(board, turns, spaces_available):
         if location == 9:
             board[8] = symbol
         spaces_available.remove(location)
-        return  symbol
+        return symbol
 board = [" "] * 9 
 spaces_available = [1,2,3,4,5,6,7,8,9]
 turns = 0 
@@ -63,9 +62,13 @@ while True:
     if winner:
         if winner == "X":
             print("You Won!")
-            again = input("Would you like to play again?(yes/no)\n)").strip().lower()
-            if again == "yes":
-                won(board)
-            else:
-                print("Thanks for playing tic-tac-toe!")
+        if winner == "O":
+            print("UH OH looks like the computer won :(")
+        else:
+            print("Looks like its a tie")
+            again = input("Would you like to play again?(yes/no)\n").strip().lower()
+        if again == "yes":
+            print (board)
+        else:
+            print("Thanks for playing tic-tac-toe!")
                 
