@@ -65,7 +65,7 @@ while True:
             print("You Won!")
         if winner == "O":
             print("UH OH looks like the computer won :(")
-        if winner == " ":
+        if winner == "":
             print("Looks like its a tie")
         again = input("Would you like to play again?(yes/no)\n").strip().lower()
         if again == "yes":
