@@ -1,6 +1,5 @@
-#LS updated calculator
-# 
-# 
+#LS Updated calculator newer version
+
 def user_input(prompt):
     return float(input(prompt))
 
@@ -47,5 +46,3 @@ def main():
         print(f"\n You are overspending by ${abs(leftover):.2f} each month.")
     else:
         print(f"\n You have ${leftover:.2f} of spending money left each month!")
-
-
