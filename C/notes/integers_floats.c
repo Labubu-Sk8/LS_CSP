@@ -18,12 +18,14 @@ int main(){
     float liters = 8.3;
     float years = 22.5;
     float cups = liters * 4.22675;
+    float root = sqrt(144);
 
     printf("%f, %.1f, %.2f\n", pi, liters, years);
     printf("%.1f liters is %.1f cups\n", liters, cups);
     printf("%.2f in Ferenheit is %.2f in Celsius", 70.0, (70.0- 32)*5/9);
 
     printf("%f\n",(int)pow(2, 3 )); // first number is the base number, second number is power number pow helps us do exponents
+    printf("%f\n", root);
 
 
     return 0;
