@@ -1,8 +1,3 @@
-#LS, Financial calculator
-
-
-monthly_income = float (input("What is your monthly income?: "))
-
 rent = float (input("What is your monthly rent/mortgage?: "))
 
 utilities = float(input("What is your monthly utilites cost?: "))
@@ -27,11 +22,3 @@ print(f"Your groceries are $", groceries, "which is", round(groceries_precent, 2
 print(f"Your transportation are $", transportation, "which is", round(transportation_precent, 2),"% of your income")
 print(f"You should save ${monthly_income * 0.1} and that is 10% of your income")
 print(f" You have ${spending_money} of spending money each month! \n")
-
-
-
-
-
-
-
-
