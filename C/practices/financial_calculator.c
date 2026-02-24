@@ -14,6 +14,7 @@ int main(){
     char savings = income * 0.10;
     printf("%c", savings);
     
+    
 
     return 0;
 
