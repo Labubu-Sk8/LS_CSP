@@ -21,7 +21,8 @@ int main(){
     char last[] = "LaRose";
     strcat(name," ");
     strcat(name, last);
-    char full_name[50]
+    char full_name[50];
+    printf("%s", name);
    
 
 
