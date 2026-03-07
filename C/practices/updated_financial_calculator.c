@@ -1,72 +1,35 @@
 // LS updated financial calculator
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include <math.h>
 
-float income;
-float rent;
-float utilities;
-float groceries;
-float transportation;
-float savings;
-float spending_money;
-void question(char* question){
-    printf("What is your monthly %s: \n", question);
-    
-   
-   
-   
+float get_input(char* prompt) {
+    float value;
+    printf("%s", prompt);
+    scanf("%f", &value);
+    return value;
 }
-int spending(int income, int rent, int utilities, int groceries, int transportation, int savings){
-    return income - (rent + utilities + groceries + transportation + savings);
+float calculate_percent(float income, float expense) {
+    return (expense / income) * 100;
 }
-int division(int rent, int income, int utilites, int groceries, int transportation){
-    return (rent/income) * 100, (utilites/income) * 100, (groceries/income) * 100, (transportation/income) * 100;
-}
-int calc(savings, income){
-    return savings = income * 0.10;
-}
-int main(){
-   question("income");
-   scanf("%f", &income);
-   while (getchar() != '\n');
-   
-   question("rent");
-   scanf("%f", &rent);
-   while (getchar() != '\n');
-   
+int main(void) {
+    float income = get_input("Whats your monthly income: ");
+    float rent = get_input("Whats your monthly rent/mortgage: ");
+    float utilities = get_input("Whats your monthly utilities: ");
+    float groceries = get_input("Whats your monthly groceries: ");
+    float transportation = get_input("Whats your monthly transportation: ");
 
-   question("utilities");
-   scanf("%f", &utilities);
-   while (getchar() != '\n');
-   
-   
-   question("groceries");
-   scanf("%f", &groceries);
-   while (getchar() != '\n');
-   
-   
+    printf("Your rent is $%.2f and that is %.0f%% of your income.\n", rent, calculate_percent(income, rent));
+    printf("Your utilities are $%.2f and that is %.0f%% of your income.\n", utilities, calculate_percent(income, utilities));
+    printf("Your groceries are $%.2f and that is %.0f%% of your income.\n", groceries, calculate_percent(income, groceries));
+    printf("Your transportation is $%.2f and that is %.0f%% of your income.\n", transportation, calculate_percent(income, transportation));
 
-   question("transportation");
-   scanf("%f", &transportation);
-   while (getchar() != '\n');
-   
-  
+    float savings = income * 0.10;
+    printf("You should save $%.2f a month, that is 10%% of your income.\n", savings);
 
-
-    printf("\nYour rent is $%.2f and that is %.2f percent of your income.\n", rent, division);
-    printf("Your utilities are $%.2f and that is %.2f percent of your income.\n", utilities, division);
-    printf("Your groceries are $%.2f and that is %.2f percent of your income.\n", groceries, division);
-    printf("Your transportation is $%.2f and that is %.2f percent of your income.\n", transportation, division);
-    printf("You should save $%.2f a month, that is %.2f percent of your income.\n", calc);
-    printf("You have $%.2f of spending money each month!\n", spending);
-
-   
-   
-  
-
+    float total_expenses = rent + utilities + groceries + transportation + savings;
+    float spending_money = income - total_expenses;
+    printf("You have $%.2f of spending money each month!\n", spending_money);
 
     return 0;
 }
