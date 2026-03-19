@@ -151,3 +151,53 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+int location_(int location){
+    printf("Where do you want to place?\n");
+    scanf("%d", &location);
+};
+
+int player_turns(board, turns, spaces_available){
+    char combinations[][20] = {"row 1" == [[0][0], [0][1], [0][2]], "row 2" == [[1][0], [1][1], [1][2]], "row 3" == [[2][0], [2][1], [2][2]], "col 1" == [[0][0], [1][0], [2][0]], "col 2" == [[0][1], [1][1], [2][1]], "col 3" == [[0][2], [1][2], [2][2]], "diag 1" == [[0][0], [1][1], [2][2]], "diag 2" == [[2][0], [1][1], [0][2]]};
+    while (true){
+        if (turns % 2 == 0){
+            char symbol_x = "X";
+            location_ 
+        }else{ 
+            char symbol_o = "O";
+            srand(time(NULL));
+            int num = rand(1, 9);
+            printf("Computer chose spot %d\n", location);
+        };
+    while (true){
+        }if (location != spaces_available){
+            print("Try again that spot is taken");
+            continue
+        }else if (location == 1){
+            board[0][0] = symbol;
+        } else if (location == 2){
+            board[0][1] = symbol;
+        }else if (location == 3){
+            board[0][2] = symbol;
+        }else if (location == 4){
+            board[1][0] = symbol;
+        }else if (location == 5){
+            board[1][1] = symbol;
+        }else if (location == 6){
+            board[1][2] = symbol;
+        }else if (location == 7){
+            board[2][0] = symbol;
+        }else if (location == 8){
+            board[2][1] = symbol;
+        }else{
+            board[2][2] = symbol;}
+        };
+        return spaces_available, symbol, board;
+    };
+
+        return 0;
+};
