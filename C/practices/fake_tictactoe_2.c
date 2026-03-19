@@ -84,15 +84,14 @@ int findBestMove(char mark) {
 int computerMove() {
     int move;
 
-    // Try to win
     move = findBestMove('O');
     if (move != -1) return move;
 
-    // Block player
+    
     move = findBestMove('X');
     if (move != -1) return move;
 
-    // Otherwise pick first available
+   
     for (int i = 1; i <= 9; i++) {
         int row = (i - 1) / 3;
         int col = (i - 1) % 3;
@@ -111,7 +110,7 @@ int main() {
     while (1) {
         displayBoard();
 
-        // Player move
+       
         printf("Your move (1-9): ");
         scanf("%d", &choice);
 
@@ -132,7 +131,7 @@ int main() {
             break;
         }
 
-        // Computer move
+
         int comp = computerMove();
         printf("Computer chooses: %d\n", comp);
         makeMove(comp, 'O');
