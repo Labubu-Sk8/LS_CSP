@@ -41,21 +41,24 @@ void computer_turn(char board[3][3]){
             if(board[spots][choices] = ' '){
                 available_spaces[counter][0] = spots;
                 available_spaces[counter][1] = choices;
-                counter++
+                counter++;
             }
         }
 
     }
-}
+
+
     if (counter > 0){
         int choice = rand() % counter;
         row = available_spaces[choice][0];
         colum = available_spaces[choice][1];
-        board[row][colum] = '0';
+        board[row][colum] = 'O';
         printf("Computer choice the spot [%d %d]\n", row, colum);
 
     }
 }
+
+
         
 
 
@@ -78,7 +81,7 @@ int main() {
     for (int turn = 0; turn < 9; turn++) { 
         playing_Board(board);
 
-        if (player == 'X') { // Player's turn
+        if (player == 'X') {
             printf("Player %c, enter your move (Row [space] Column ): ", player);
             scanf("%d %d", &row, &col);
             if (row < 0 || row > 2 || col < 0 || col > 2 || board[row][col] != ' ') {
@@ -87,7 +90,7 @@ int main() {
                 continue;
             }
             board[row][col] = player;
-        } else {
+        }else{
          
             computer_turn(board);
         }
