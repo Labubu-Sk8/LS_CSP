@@ -80,12 +80,13 @@ int main() {
 
     for (int turn = 0; turn < 9; turn++) { 
         playing_Board(board);
+        
 
         if (player == 'X') {
-            printf("Player %c, enter your move (Row [space] Column ): ", player);
+            printf("Player %c, enter your move by type the row then a space and the the colum: ", player);
             scanf("%d %d", &row, &col);
             if (row < 0 || row > 2 || col < 0 || col > 2 || board[row][col] != ' ') {
-                printf("Invalid move. Try again.\n");
+                printf("That spot is taken! Try again.\n");
                 turn--;
                 continue;
             }
