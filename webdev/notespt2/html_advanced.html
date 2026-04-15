@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--CSS stands for cascading style sheets-->
         <title>Advanced Notes on HTML</title>
         <meta charset="UTF-8">
+        <!--Embeded CSS goes inside of the head tags using the <style. tag-->
+            <style>
+                *{
+                    background-color:lightblue;
+                }
+                p{
+                    background-color:black;
+                    
+                    font-size:3em;
+                }
+                h1{
+                    text-align:center;
+                    border: 2px solid yellow;
+                }
+                img{
+                    width: 50%;
+                }
+            </style>
         <body>
             <h1>HTML Advanced Notes</h1>
+            <!--Inline styles are done in the html opening tag. This is bad practice to use-->
             <div style="background-color: antiquewhite; height:100px; width: 100px">
                 <p>Div Content</p>
             </div>
@@ -33,3 +53,4 @@
             
     </head>
 </html>
+<!--CSS notes is everything inside <style>-->
