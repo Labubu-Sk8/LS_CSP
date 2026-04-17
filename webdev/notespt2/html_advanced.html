@@ -4,32 +4,84 @@
         <!--CSS stands for cascading style sheets-->
         <title>Advanced Notes on HTML</title>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+
         <!--Embeded CSS goes inside of the head tags using the <style. tag-->
+        <!---CSS Advanced notes-->
             <style>
-                *{
+                body{
                     background-color:lightblue;
+                    font-family: papyrus, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, fantasy;
                 }
                 p{
-                    background-color:black;
+                    background-color:white ;
                     
-                    font-size:3em;
+                    font-size:1em;
                 }
                 h1{
                     text-align:center;
                     border: 2px solid yellow;
+                    font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+                    
                 }
+                
                 img{
                     width: 50%;
+                    
                 }
-            </style>
+                #bolded{
+                    font-weight:bolder;
+                }
+                #heading{
+                    font-style:italic;
+                    font-variant: small-caps;
+
+                }
+                #box{
+                    background-color:purple; height:100px; width: 100px;
+                    height: 100px;
+                    width:100px;
+                    text-align: center;
+                    margin:30px;
+                    padding-top:30px;
+
+                }
+                #box-wrapper{
+                    display: flex;
+                    justify-content: center;
+                }
+                .lists-wrapper{
+                    display:grid;
+                    grid-template-columns: 1fr 1fr; 
+
+                }
+                #Ordered-lists{
+                    background-color: lightgoldenrodyellow;
+
+                    margin-right:10px;
+                }
+                .images{
+                    display:block;
+                    margin:auto;
+                    width:50%;
+                    
+                }
+
+            </style><!-- 1fr stands for one fraction-->
         <body>
             <h1>HTML Advanced Notes</h1>
             <!--Inline styles are done in the html opening tag. This is bad practice to use-->
-            <div style="background-color: antiquewhite; height:100px; width: 100px">
+            <div id="box-wrapper">
+            <div id="box">
                 <p>Div Content</p>
-            </div>
+            </div></div>
+            <div class="lists-wrapper">
             <div id="Ordered-lists">
-            <p>This is how you make an ordered list(numbered) list</p>
+            <p id="heading">This is how you make an ordered list(numbered) list</p>
             <ol> 
                 <li>Programming 2</li>
                 <li>Programming 2</li>
@@ -37,9 +89,9 @@
                 <li>Lunch</li>
             </ol>
             </div>
-            <br>
+
             <div id="Unordered-lists">
-            <p> This is how you create an unordered list(bulleted) list</p>
+            <p > This is how you create an <span id=bolded>unordered list(bulleted)</span> list</p>
             <ul style = "list-style-type:circle"> <!--typing this gives it style like cirlce,disc,square,etc.-->
                 <li>Apple</li>
                 <li>Orange</li>
@@ -47,9 +99,13 @@
                 <li>Peach</li>
                 <li>Grape</li>
             </ul>
-            <a href="https://ucas-edu.instructure.com/courses/4362/assignments/89779" target="_blank">canvas assingment submission</a><!--how you add a link using an A tag and the attribute targer="_blank" this will help open link in a new tab-->
-            <img src="https://i.pinimg.com/originals/a0/21/56/a02156b75a9929abef7366b5fa79ac81.jpg" alt="New York Streets" height="400px"> <!--How you get images make sure that you are pasting the actual image adress and not that google search-->
-            </div>
+            <a href="https://ucas-edu.instructure.com/courses/4362/assignments/89779" target="_blank">canvas assingment submission</a>
+             </div></div>
+            
+            
+        <div class="images"> <!--how you add a link using an A tag and the attribute targer="_blank" this will help open link in a new tab-->
+            <img src="https://i.pinimg.com/originals/a0/21/56/a02156b75a9929abef7366b5fa79ac81.jpg" alt="New York Streets" height="400px"></div><!--How you get images make sure that you are pasting the actual image adress and not that google search-->
+            
             
     </head>
 </html>
