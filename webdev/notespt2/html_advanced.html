@@ -65,13 +65,20 @@
                     margin-right:10px;
                 }
                 .images{
-                    display:block;
+                    display:None;
                     margin:auto;
                     width:50%;
                     
                 }
 
             </style><!-- 1fr stands for one fraction-->
+            <script>
+                function show(){
+                    document.getElementById("clicking").innerHTML = "Hide Images"
+
+                   document.getElementById("images").style.display ="block"
+                }
+            </script>
         <body>
             <h1>HTML Advanced Notes</h1>
             <!--Inline styles are done in the html opening tag. This is bad practice to use-->
@@ -100,10 +107,11 @@
                 <li>Grape</li>
             </ul>
             <a href="https://ucas-edu.instructure.com/courses/4362/assignments/89779" target="_blank">canvas assingment submission</a>
-             </div></div>
+             </div>
+            </div>
+            <button id="clicking" onlclick="show()">Show images</button>
             
-            
-        <div class="images"> <!--how you add a link using an A tag and the attribute targer="_blank" this will help open link in a new tab-->
+            <div class="images" id="images"> <!--how you add a link using an A tag and the attribute targer="_blank" this will help open link in a new tab-->
             <img src="https://i.pinimg.com/originals/a0/21/56/a02156b75a9929abef7366b5fa79ac81.jpg" alt="New York Streets" height="400px"></div><!--How you get images make sure that you are pasting the actual image adress and not that google search-->
             
             

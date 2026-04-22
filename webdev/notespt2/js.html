@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Notes</title>
+        <meta charset="UTF-8">
+        <style>
+            img{
+                width: 50%
+            }
+            #image-wrapper{
+                display:none;
+            }
+
+        </style>
+        <script>
+            function change_color(){
+                document.getElementById("change").style.color ="orange"
+            }
+            function show_image(){
+                if(document.getElementById("image-wrapper").style.display == "block"){
+                    document.getElementById("image-wrapper").style.display = "none"
+                    document.getElementById("show").innerHTML = "Show Image"
+                }else{
+                    document.getElementById("image-wrapper").style.display = "block"
+                    document.getElementById("show").innerHTML = "Hide Image"
+                }
+                
+                
+            }
+            function hover(id){
+                document.getElementById(id).style.backgroundColor = "pink"
+                document.getElementById(id).style.color = "white"
+            }
+            function leave(id){
+                document.getElementById(id).style.backgroundColor = "grey"
+                document.getElementById(id).style.color = "black"
+            }
+            function popup(){
+                alert("You should be taking notes!")
+            }
+            let images =["https://i.pinimg.com/originals/a0/21/56/a02156b75a9929abef7366b5fa79ac81.jpg", "https://wp.dailybruin.com/images/2020/07/web.ae_.dominicfike.review.courtesy.jpg", "https://upload.wikimedia.org/wikipedia/en/1/16/Alleyezonme.jpg"]
+            //onclick onmousedown onmouseenter onmouseleave
+        </script>
+
+    </head>
+    <body>
+        <h1 id="change" onmouseover="popup()">JavaScript Notes</h1>
+        <button onclick="change_color()" onmouseover="hover('button')" id="button" onmouseout="leave('button')">Click me</button>
+        <button onclick="show_image()" id="show" onmouseover="hover('show')" onmouseout="leave('show')">Show Image</button>
+        <div id="image-wrapper">
+            <img src="https://i.pinimg.com/originals/a0/21/56/a02156b75a9929abef7366b5fa79ac81.jpg"/>
+
+        </div>
+
+    </body>
+</html>
