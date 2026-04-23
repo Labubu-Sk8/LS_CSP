@@ -11,7 +11,7 @@
                 width: 20%;
                 height: 250%;
                 display: flex;
-                justify-content: right;
+                justify-content: center;
                 margin:right;
                 padding-top: 15px;
                 
@@ -44,8 +44,21 @@
 
         </style>
     </head>
+    <script>
+        function extra_info(){
+                if(document.getElementById("image-wrapper").style.display == "block"){
+                    document.getElementById("image-wrapper").style.display = "none"
+                    document.getElementById("show").innerHTML = "Show Extra Info"
+                }else{
+                    document.getElementById("image-wrapper").style.display = "block"
+                    document.getElementById("show").innerHTML = "Hide Extra Info"
+                }
+            }
+
+    </script>
     <body>
         <h1>The Love of Music</h1>
+        <img src="https://preview.redd.it/a-collage-of-classic-hip-hop-albums-i-havent-listened-to-v0-gkym1855i9ga1.jpg?width=640&crop=smart&auto=webp&s=d790f621dece2c37057096551eca3a28bcca6f29" onmouseover="this.src=('https:i.etsystatic.com/41568603/r/il/addef6/7018522293/il_fullxfull.7018522293_t5yf.jpg')" onmouseout= "this.src=('https:/preview.redd.it/a-collage-of-classic-hip-hop-albums-i-havent-listened-to-v0-gkym1855i9ga1.jpg?width=640&crop=smart&auto=webp&s=d790f621dece2c37057096551eca3a28bcca6f29')">
         <p> Music is a way of life, a way of expressing ones self thought and ambitions. Music has been aorund for ages, and the way it has already impacted many people is a blessing in disguise. 
             Music isn't just words but feelings. From rap albums, to hip-hop and R&B, music always finds a way to help someone in need without even knowning it.</p>
 
@@ -56,6 +69,8 @@
         I can count on even if I can't count on most people in my life. Ive never had to worry about whether my music would judge me or not
         and it never does. Music is always there no matter the time of day or night. Music has always been a huge part of my life and I will never forget all the impacts and ways its gotten me through things.</p>
         </div>
+
+
         <div class="title">
             <h3>Songs On Repeat</h3>
 
@@ -110,12 +125,31 @@
   <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/2PacGreatestHits.jpg">
   <img src="https://upload.wikimedia.org/wikipedia/en/1/16/Alleyezonme.jpg">
 </div>
-    
     </b>
 </p>
 
 
-    
+    <button onclick="extra_info()" id="show" onmouseover="hover('show')" onmouseout="leave('show')">Extra Info!</button>
+    <div id="image-wrapper">
+            <img src="https://p-news-upload.storage.googleapis.com/2024/10/tyler-creator-chromakopia-album.jpg"/>
+            <p>Here is some extra info on a whole other artist. Here we have Tyler The Creator, his music taste could be described as a mix of Tupac, with a touchy feel of Dominic Fike. All these artist are really great listens, the way the make sure to get their feelings out with just the right amount of passion is perfect! Tyler has always had a funny sense of style and makes sure to impliment a lot of that into his music. Some of songs that are great hits include: <ul style = "list-style-type:circle">
+
+        </ul>
+        <b><li>Chromakopia</li>
+            <li>Sticky</li>
+            <li>See you again</li>
+            <li>Rah Tah Tah </li>
+            <li>earfquake</li>
+            <li>Are we still friends?</li></b>
+        </ul> </p>
+
+        </div>
+        
+
+        
+
+
+   
 
 
 
