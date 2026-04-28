@@ -15,6 +15,20 @@
             *{
                 background-color: ivory;
             }
+            h1{
+                text-align:center;
+                    border: 2px solid lightblue;
+                    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+            }
+            p{
+                background-color:#eef6ff ;
+                font-size:1em;
+            }
+            
+
+            
 
         </style>
    
@@ -28,16 +42,56 @@
                 Salt Lake City is a great place to visit, there are man tourist attractions for example temple square, the state capital building, and more! 
                 Here is a list of reasons of why you should go visit Salt Lake City:</p>
             <ul style = "list-style-type:circle"> 
-            <b><li>Thriving Culinary & Beverage Scene</li> 
-            <li>Professional Sports</li> 
-            <li>Vibrant Neighborhoods & Shopping</li> 
-            <li>Perfmorning Arts</li> </b>
+            <b><li>Thriving Culinary & Beverage Scene</li></b>
+            -The food is divine and the differences in culture is like a delicious explosion on your tastebuds.
+
+            <b><li>Professional Sports</li></b>
+            -Utah is known for having am amazing ski resorts, and we have our own NBA team the "Utah Jazz" They are an exceptional team, as well for the other teams we have here.
+
+            <b><li>Vibrant Neighborhoods & Shopping</li></b>
+            -The shops are amazing, you get different styles on almost every corner, you definitely can't miss it.
+
+            <b><li>Perfmorning Arts</li></b>
+            -The theaters are amazing with 5 star theaters and the performances you get to witness, are nearly exquisite.
         </ul> 
         
-        <div style="display: flex; gap: 500px;">
-            <img src="https://i0.wp.com/duffelbagspouse.com/wp-content/uploads/2024/04/downtown-salt-lake-city.webp?resize=519%2C389&ssl=1g">
+        <div style="display: flex; gap: 500px;" id="img">
+        <img src="https://i0.wp.com/duffelbagspouse.com/wp-content/uploads/2024/04/downtown-salt-lake-city.webp?resize=519%2C389&ssl=1g">
         <img src="https://stagedhaze.com/wp-content/uploads/2024/05/Screenshot-2024-05-15-at-1.30.50%E2%80%AFPM.png">
         <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_360,q_75,w_640/v1/clients/saltlake/Arts_Events_Culture_ArtsFestival_E_Sargent_87ed100d-008a-4f91-b8b7-0c00bad3aff7.jpg">
 </div>
+
+        <button onclick="extra_info()" id="show" onmouseover="hover('show')" onmouseout="leave('show')">Extra Info!</button>
+        <div id="image-wrapper">
+            <img src="https://images.ctfassets.net/t0xuqwv6k7ay/3MJONsC5JvhH8q1MiotxUD/ebefe4bccfc2871fa91e3bdda703737e/hive_music_festival_hero_image.jpg?fm=webp"/>
+            <p>Here is some extra info on the music festivals in Salt Lake City. There are many music festivals, as well as just general festivals that occur in Salt Lake City that bring in a lot of people just to see them. Here are a few: <ul style = "list-style-type:circle">
+
+        </ul>
+        <b><li>Kilby Block Party</li></b>
+        -A 3 day, all-ages music festival held in May
+        <b><li>Utah Pride Festival</li></b>
+        -A large celebration of the LGBTQ+ commmunity, featuring a parade and festivities
+        <b><li>Utah State Fair</li></b>
+        -An annual fair with entertainment and exhibits
+        <b><li>Utah Arts Festival</li></b>
+        -An annual event focused on visual arts, film, music, and food
+        <b><li>RedWest Country Festival</li></b>
+        -A 2-3 day country and Americana music festival
+            
+        </ul> </p>
+
+        </div>
+
         </body>
     </head>
+    <script>
+        function extra_info(){
+                if(document.getElementById("image-wrapper").style.display == "block"){
+                    document.getElementById("image-wrapper").style.display = "none"
+                    document.getElementById("show").innerHTML = "Show Extra Info"
+                }else{
+                    document.getElementById("image-wrapper").style.display = "block"
+                    document.getElementById("show").innerHTML = "Hide Extra Info"
+                }
+            }
+    </script>
